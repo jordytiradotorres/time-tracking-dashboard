@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  box-sizing: border-box;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+figure,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+ul a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: $font-rubik;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $very-dark-blue;
+}
+
+.wrapper {
+  min-width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gutter {
+  margin: 0 auto;
+  width: 90%;
+
+  @include mq(medium) {
+    width: 80%;
+  }
+}
+
+.attribution {
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  color: #ffffff;
+}
