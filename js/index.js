@@ -43,7 +43,7 @@ data.then((result) => {
   console.log(result);
   result.map((item, index) => {
     const template = `
-        <div class="item">
+        <div class="item ${item.title.toLowerCase().replaceAll(" ", "-")}">
           <figure class="item__image">
             <img src=${images[index].url} alt=${images[index].title} />
           </figure>

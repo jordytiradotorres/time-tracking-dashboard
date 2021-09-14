@@ -1,10 +1,25 @@
 .dashboard {
   margin-top: 3rem;
 
+  .grid {
+    @include mq(medium) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
   &__item {
     position: relative;
     margin-bottom: 1.2rem;
     color: $pale-blue;
+
+    @include mq(medium) {
+      grid-column: auto;
+      grid-row: 1 / span 2;
+      margin-bottom: 0;
+    }
 
     .avatar {
       position: relative;
@@ -19,6 +34,7 @@
 
       @include mq(medium) {
         display: block;
+        top: 0;
       }
 
       img {
@@ -63,8 +79,13 @@
     .report {
       background-color: $dark-blue;
       padding: 1rem;
-      padding-top: 2rem;
+      padding-top: 2.5rem;
       border-radius: 0 0 1rem 1rem;
+
+      @include mq(medium) {
+        padding-bottom: 1.5rem;
+        margin-top: -1rem;
+      }
 
       ul {
         display: flex;
@@ -104,10 +125,19 @@
     border-radius: 1rem;
     margin-bottom: 1.2rem;
 
+    @include mq(medium) {
+      margin-bottom: 0;
+    }
+
     & img {
       width: 76px;
       height: 76px;
       object-fit: contain;
+
+      @include mq(medium) {
+        width: 83px;
+        height: 83px;
+      }
     }
 
     &__image {
@@ -129,6 +159,10 @@
       padding: 2rem 1rem;
       margin-top: -1.9rem;
       overflow: hidden;
+
+      @include mq(medium) {
+        padding: 1.5rem;
+      }
     }
 
     &__title,
@@ -143,6 +177,10 @@
         color: #ffffff;
         font-weight: 400;
         margin-bottom: 0.5rem;
+
+        @include mq(medium) {
+          margin-bottom: 0;
+        }
       }
 
       img {
@@ -153,9 +191,19 @@
     }
 
     &__date {
+      @include mq(medium) {
+        display: block;
+      }
+
       time {
+        display: block;
         font-size: 2rem;
         color: #ffffff;
+
+        @include mq(medium) {
+          margin-top: 1rem;
+          margin-bottom: 0.5rem;
+        }
       }
 
       p {
