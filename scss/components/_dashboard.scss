@@ -159,6 +159,7 @@
       padding: 2rem 1rem;
       margin-top: -1.9rem;
       overflow: hidden;
+      min-width: 200px;
 
       @include mq(medium) {
         padding: 1.5rem;

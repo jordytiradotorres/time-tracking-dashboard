@@ -63,6 +63,9 @@ body {
   padding: 0.5rem;
   color: #ffffff; }
 
+a.active {
+  color: #ffffff !important; }
+
 .dashboard {
   margin-top: 3rem; }
   @media (min-width: 860px) {
@@ -179,7 +182,8 @@ body {
       border-radius: 1rem;
       padding: 2rem 1rem;
       margin-top: -1.9rem;
-      overflow: hidden; }
+      overflow: hidden;
+      min-width: 200px; }
       @media (min-width: 860px) {
         .dashboard .item__content {
           padding: 1.5rem; } }
